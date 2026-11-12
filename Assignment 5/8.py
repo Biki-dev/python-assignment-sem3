@@ -1,0 +1,13 @@
+import tkinter as tk
+root = tk.Tk()
+root.geometry("500x400")
+root.title("Menu Application")
+menubar = tk.Menu(root)
+file_menu = tk.Menu(menubar, tearoff=0)
+file_menu.add_command(label="create new")
+file_menu.add_command(label="open")
+file_menu.add_command(label="save")
+file_menu.add_command(label="close", command=root.destroy)
+menubar.add_cascade(label="File", menu=file_menu)
+root.config(menu=menubar)
+root.mainloop()
